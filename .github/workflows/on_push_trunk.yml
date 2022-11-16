@@ -10,6 +10,7 @@ on:
 
 env:
   NODE_VERSION: 14.17.3
+  REPOSITORY: ruluzor/ci-angular-project
 
 jobs:
   run-scripts:
@@ -36,7 +37,7 @@ jobs:
     - name: Checkout files
       uses: actions/checkout@v2
       with:
-        repository: ruluzor/odeslad-web
+        repository: ${{ env.REPOSITORY }}
         ref: trunk
         token: ${{ secrets.TOKEN_ACTION_CI_ANGULAR_PROJECT }}
 
